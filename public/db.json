@@ -1,0 +1,74 @@
+{
+  "videos": [
+    {
+      "id": "IZ3lySZCbms",
+      "title": "Como o Primo Pobre Investe?",
+      "url": "https://www.youtube.com/watch?v=IZ3lySZCbms",
+      "cover": "https://img.youtube.com/vi/IZ3lySZCbms/maxresdefault.jpg",
+      "category": "Fundamentos do Investidor"
+    },
+    {
+      "id": "1vGVHGyqg0U",
+      "title": "Como se Organizar com Pouco Dinheiro",
+      "url": "https://www.youtube.com/watch?v=1vGVHGyqg0U",
+      "cover": "https://img.youtube.com/vi/1vGVHGyqg0U/maxresdefault.jpg",
+      "category": "Fundamentos do Investidor"
+    },
+    {
+      "id": "bDSJHAHK2PI",
+      "title": "5 Dicas para Nunca Faltar Dinheiro",
+      "url": "https://www.youtube.com/watch?v=bDSJHAHK2PI",
+      "cover": "https://img.youtube.com/vi/bDSJHAHK2PI/maxresdefault.jpg",
+      "category": "Fundamentos do Investidor"
+    },
+    {
+      "id": "3-MPKFhXyqo",
+      "title": "5 Investimentos que Todos Deveriam Ter",
+      "url": "https://www.youtube.com/watch?v=3-MPKFhXyqo",
+      "cover": "https://img.youtube.com/vi/3-MPKFhXyqo/maxresdefault.jpg",
+      "category": "Análise de Mercado"
+    },
+    {
+      "id": "muuwpUvdnFo",
+      "title": "Investindo 300 Mil Reais na Prática",
+      "url": "https://www.youtube.com/watch?v=muuwpUvdnFo",
+      "cover": "https://img.youtube.com/vi/muuwpUvdnFo/maxresdefault.jpg",
+      "category": "Análise de Mercado"
+    },
+    {
+      "id": "R2JIy94FE5g",
+      "title": "Bitcoin como Reserva de Valor Global?",
+      "url": "https://www.youtube.com/watch?v=R2JIy94FE5g",
+      "cover": "https://img.youtube.com/vi/R2JIy94FE5g/maxresdefault.jpg",
+      "category": "Criptoativos"
+    },
+    {
+      "id": "v_OhSz-V9g4",
+      "title": "Tire suas Dúvidas sobre Criptomoedas",
+      "url": "https://www.youtube.com/watch?v=v_OhSz-V9g4",
+      "cover": "https://img.youtube.com/vi/v_OhSz-V9g4/maxresdefault.jpg",
+      "category": "Criptoativos"
+    },
+    {
+      "id": "RzZgFgmafZs",
+      "title": "1% em Bitcoin faz Diferença?",
+      "url": "https://www.youtube.com/watch?v=RzZgFgmafZs",
+      "cover": "https://img.youtube.com/vi/RzZgFgmafZs/maxresdefault.jpg",
+      "category": "Criptoativos"
+    },
+    {
+      "id": "4HDRyYuGx4A",
+      "title": "A Carteira Privada do Primo Rico",
+      "url": "https://www.youtube.com/watch?v=4HDRyYuGx4A",
+      "cover": "https://img.youtube.com/vi/4HDRyYuGx4A/maxresdefault.jpg",
+      "category": "Mindset Financeiro"
+    },
+    {
+      "id": "w6IPOktNEew",
+      "title": "Invista Nisso para Mudar de Vida",
+      "url": "https://www.youtube.com/watch?v=w6IPOktNEew",
+      "cover": "https://img.youtube.com/vi/w6IPOktNEew/maxresdefault.jpg",
+      "category": "Mindset Financeiro"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+.categorySection {
+    margin: 40px 0;
+    padding: 0 20px; /* Menos padding lateral em mobile */
+}
+
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.categoryTitle {
+    font-size: 1.5rem;
+    color: #ccd6f6;
+    margin: 0;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #233554;
+}
+
+.cardsGrid {
+    display: grid;
+    /* Grid responsivo auto-ajustável (Senior pattern) */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px;
+}

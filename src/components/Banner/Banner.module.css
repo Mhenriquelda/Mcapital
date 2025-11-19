@@ -1,0 +1,103 @@
+.heroSection {
+    /* Fundo estilo Bloomberg/Terminal */
+    background: radial-gradient(circle at top right, #172a45 0%, #0a192f 60%);
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 5vw;
+    margin-top: 80px; /* Compensar Header fixo */
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContent {
+    max-width: 600px;
+    z-index: 2;
+}
+
+.tagline {
+    color: #64ffda;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.heroContent h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 10px 0 20px 0;
+    color: #e6f1ff;
+}
+
+.highlight {
+    color: #ffd700; /* Dourado */
+}
+
+.heroContent p {
+    font-size: 1.1rem;
+    color: #8892b0;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 480px;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 15px;
+}
+
+.btnPrimary {
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 600;
+}
+
+.btnPrimary:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.btnSecondary {
+    background-color: transparent;
+    border: none;
+    color: #ccd6f6;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Elemento visual abstrato (Barras de gráfico animadas) */
+.heroVisual {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    height: 200px;
+    opacity: 0.5;
+}
+
+.graphBar {
+    width: 40px;
+    background: linear-gradient(to top, #0a192f, #64ffda);
+    border-radius: 4px 4px 0 0;
+    animation: grow 2s ease-in-out infinite alternate;
+}
+
+.graphBar:nth-child(1) { height: 40%; animation-delay: 0s; }
+.graphBar:nth-child(2) { height: 70%; animation-delay: 0.3s; }
+.graphBar:nth-child(3) { height: 55%; animation-delay: 0.6s; }
+
+@keyframes grow {
+    from { transform: scaleY(0.8); }
+    to { transform: scaleY(1.1); }
+}

@@ -1,0 +1,74 @@
+.header {
+    background-color: rgba(10, 25, 47, 0.95); /* Usando cor do tema com transparência */
+    backdrop-filter: blur(10px); /* Efeito Glassmorphism moderno */
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    padding: 0 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 80px;
+}
+
+.brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary); /* Usando variável global se importada, ou fallback */
+    color: #ccd6f6;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.proBadge {
+    font-size: 0.7rem;
+    background-color: #ffd700; /* Dourado */
+    color: #0a192f;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.searchWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    background-color: #112240;
+    border: 1px solid #233554;
+    border-radius: 4px;
+    color: #ccd6f6;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+    width: 300px;
+    transition: all 0.2s ease-in-out;
+}
+
+.searchInput:focus {
+    outline: none;
+    border-color: #64ffda; /* Verde Accent */
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.1);
+}
+
+.searchButton {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #8892b0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.searchButton:hover {
+    color: #64ffda;
+}
