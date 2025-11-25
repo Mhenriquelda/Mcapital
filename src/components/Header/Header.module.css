@@ -1,8 +1,8 @@
 .header {
-    background-color: rgba(10, 25, 47, 0.95); /* Usando cor do tema com transparência */
-    backdrop-filter: blur(10px); /* Efeito Glassmorphism moderno */
+    background-color: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(100, 255, 218, 0.1);
-    padding: 0 5vw;
+    padding: 0 40px; /* Ajustado para mais espaço lateral */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,8 +17,8 @@
 .brand {
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--text-primary); /* Usando variável global se importada, ou fallback */
     color: #ccd6f6;
+    text-decoration: none; /* Remove sublinhado do logo */
     letter-spacing: 0.5px;
     display: flex;
     align-items: center;
@@ -27,7 +27,7 @@
 
 .proBadge {
     font-size: 0.7rem;
-    background-color: #ffd700; /* Dourado */
+    background-color: #ffd700;
     color: #0a192f;
     padding: 2px 6px;
     border-radius: 4px;
@@ -35,6 +35,27 @@
     letter-spacing: 1px;
 }
 
+/* --- NOVOS ESTILOS PARA O MENU --- */
+.navMenu {
+    display: flex;
+    gap: 30px; /* Espaço entre os links */
+    margin-left: auto; /* Empurra o menu para a direita */
+    margin-right: 30px; /* Espaço entre o menu e a barra de busca */
+}
+
+.navLink {
+    color: #8892b0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navLink:hover {
+    color: #64ffda; /* Cor de destaque ao passar o mouse */
+}
+
+/* --- BARRA DE BUSCA --- */
 .searchWrapper {
     position: relative;
     display: flex;
@@ -47,6 +68,7 @@
     border-radius: 4px;
     color: #ccd6f6;
     padding: 10px 15px;
+    padding-right: 40px; /* Espaço para o ícone */
     font-size: 0.95rem;
     width: 300px;
     transition: all 0.2s ease-in-out;
@@ -54,7 +76,7 @@
 
 .searchInput:focus {
     outline: none;
-    border-color: #64ffda; /* Verde Accent */
+    border-color: #64ffda;
     box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.1);
 }
 
@@ -71,4 +93,14 @@
 
 .searchButton:hover {
     color: #64ffda;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .navMenu {
+        display: none; /* Esconde o menu em telas menores */
+    }
+    .searchInput {
+        width: 200px;
+    }
 }

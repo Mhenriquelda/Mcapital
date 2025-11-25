@@ -1,6 +1,7 @@
 .container {
-    max-width: 1400px; /* Mais largo para telas modernas */
+    max-width: 1440px; /* Largura máxima padrão moderna */
+    width: 90%; /* Garante margem lateral em telas menores */
     margin: 0 auto;
-    padding: 0 20px;
-    min-height: 60vh;
+    padding-bottom: 80px; /* Espaço extra no final da página */
+    position: relative;
 }

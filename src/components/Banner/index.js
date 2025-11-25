@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Banner.module.css';
 
 function Banner() {
@@ -12,12 +13,11 @@ function Banner() {
                     e criptoativos curados por Marcos Henrique.
                 </p>
                 <div className={styles.ctaGroup}>
-                    <button className={styles.btnPrimary}>Começar Agora</button>
-                    <button className={styles.btnSecondary}>Ver Planos</button>
+                    <Link to="/planos" className={styles.btnPrimary}>Começar Agora</Link>
+                    <Link to="/planos" className={styles.btnSecondary}>Ver Planos</Link>
                 </div>
             </div>
             <div className={styles.heroVisual}>
-                {/* Abstração de gráfico ou elemento visual */}
                 <div className={styles.graphBar}></div>
                 <div className={styles.graphBar}></div>
                 <div className={styles.graphBar}></div>

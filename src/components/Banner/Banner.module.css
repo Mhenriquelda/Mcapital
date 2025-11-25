@@ -1,69 +1,82 @@
 .heroSection {
-    /* Fundo estilo Bloomberg/Terminal */
-    background: radial-gradient(circle at top right, #172a45 0%, #0a192f 60%);
-    min-height: 500px;
+    /* Fundo: Um gradiente radial sutil para dar profundidade, saindo do azul escuro para um tom levemente mais claro no topo */
+    background: radial-gradient(circle at 80% 20%, #172a45 0%, #0a192f 70%);
+    min-height: 550px; /* Um pouco mais alto para impor respeito */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 5vw;
-    margin-top: 80px; /* Compensar Header fixo */
+    padding: 120px 5vw 60px 5vw; /* Padding-top maior por causa do Header fixo */
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 -20px 30px -10px #0a192f; /* Suaviza a transição para o resto da página */
 }
 
 .heroContent {
     max-width: 600px;
     z-index: 2;
+    position: relative;
 }
 
 .tagline {
-    color: #64ffda;
-    font-size: 0.9rem;
+    color: #64ffda; /* Verde Neon */
+    font-size: 0.85rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    display: block;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: rgba(100, 255, 218, 0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 .heroContent h1 {
     font-size: 3.5rem;
     line-height: 1.1;
-    margin: 10px 0 20px 0;
+    margin: 0 0 25px 0;
     color: #e6f1ff;
+    font-weight: 800;
 }
 
 .highlight {
-    color: #ffd700; /* Dourado */
+    background: linear-gradient(120deg, #ffd700 0%, #ffa500 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Texto dourado gradiente */
 }
 
 .heroContent p {
     font-size: 1.1rem;
     color: #8892b0;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    max-width: 480px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 500px;
 }
 
 .ctaGroup {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    align-items: center;
 }
 
 .btnPrimary {
     background-color: transparent;
     border: 1px solid #64ffda;
     color: #64ffda;
-    padding: 12px 28px;
+    padding: 14px 32px;
     font-size: 1rem;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
     font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btnPrimary:hover {
     background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
 }
 
 .btnSecondary {
@@ -73,31 +86,72 @@
     padding: 12px 20px;
     font-size: 1rem;
     cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 4px;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
 }
 
-/* Elemento visual abstrato (Barras de gráfico animadas) */
+.btnSecondary::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #ccd6f6;
+    transition: width 0.3s;
+}
+
+.btnSecondary:hover::after {
+    width: 100%;
+}
+
+/* --- ANIMAÇÃO DO GRÁFICO --- */
 .heroVisual {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: flex-end;
-    height: 200px;
-    opacity: 0.5;
+    height: 250px;
+    padding-right: 50px;
+    opacity: 0.8;
 }
 
 .graphBar {
-    width: 40px;
-    background: linear-gradient(to top, #0a192f, #64ffda);
-    border-radius: 4px 4px 0 0;
-    animation: grow 2s ease-in-out infinite alternate;
+    width: 50px;
+    /* Gradiente nas barras para parecer futurista */
+    background: linear-gradient(to top, rgba(100, 255, 218, 0.1), #64ffda);
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    animation: grow 3s ease-in-out infinite alternate;
+    transform-origin: bottom;
 }
 
+/* Tempos diferentes para cada barra parecer "viva" */
 .graphBar:nth-child(1) { height: 40%; animation-delay: 0s; }
-.graphBar:nth-child(2) { height: 70%; animation-delay: 0.3s; }
-.graphBar:nth-child(3) { height: 55%; animation-delay: 0.6s; }
+.graphBar:nth-child(2) { height: 80%; animation-delay: 0.5s; }
+.graphBar:nth-child(3) { height: 60%; animation-delay: 1s; }
 
 @keyframes grow {
-    from { transform: scaleY(0.8); }
-    to { transform: scaleY(1.1); }
+    0% { transform: scaleY(0.8); opacity: 0.7; }
+    100% { transform: scaleY(1.1); opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .heroSection {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+        justify-content: center;
+    }
+    
+    .heroContent {
+        margin-bottom: 50px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .heroVisual {
+        padding-right: 0;
+        height: 150px;
+    }
 }

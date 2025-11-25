@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Card.module.css';
 
-function Card({ title, url, cover }) {
+function Card({ id, title, cover }) {
     return (
-        <a 
-          href={url} 
+        <Link 
+          to={`/watch/${id}`} 
           target="_blank"
           rel="noopener noreferrer" 
           className={styles.cardWrapper}
@@ -19,7 +20,7 @@ function Card({ title, url, cover }) {
                 <span className={styles.tag}>Vídeo Aula</span>
                 <h4 className={styles.videoTitle}>{title}</h4>
             </div>
-        </a>
+        </Link>
     );
 }
 

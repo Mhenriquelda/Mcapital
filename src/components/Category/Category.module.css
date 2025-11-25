@@ -1,31 +1,38 @@
 .categorySection {
-    margin: 40px 0;
-    padding: 0 20px; /* Menos padding lateral em mobile */
+    margin: 60px 0; /* Aumentado para dar mais respiro entre seções */
+    padding: 0 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animação suave de entrada */
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
 .headerWrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Mais espaço entre o título e os cards */
 }
 
 .categoryTitle {
-    font-size: 1.5rem;
-    color: #ccd6f6;
+    font-size: 1.8rem; /* Título um pouco maior */
+    color: #e6f1ff; /* Cor mais clara para destaque */
     margin: 0;
     white-space: nowrap;
     padding-right: 20px;
+    font-weight: 700;
 }
 
 .line {
     height: 1px;
     width: 100%;
-    background-color: #233554;
+    background: linear-gradient(to right, #233554, transparent); /* Linha que desvanece */
 }
 
 .cardsGrid {
     display: grid;
-    /* Grid responsivo auto-ajustável (Senior pattern) */
+    /* Grid responsivo inteligente: Cards com minimo de 280px */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    gap: 25px;
+    gap: 30px; /* Mais espaço entre os cards */
 }
